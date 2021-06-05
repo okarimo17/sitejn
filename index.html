@@ -159,7 +159,48 @@
       </div>
     </div>
   </div>
+
+  <div class="sperater py-2">
+    <div class="container">
+      <hr>
+    </div>
+  </div>
   
+
+  <div class="partners-section bg-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="owl-carousel partners-carousel">
+          <div class="item">
+            <div class="item-inner">
+              <img src="./assets/img/home/partners/1.png" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-inner">
+              <img src="./assets/img/home/partners/2.png" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-inner">
+              <img src="./assets/img/home/partners/3.png" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-inner">
+              <img src="./assets/img/home/partners/4.png" alt="">
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-inner">
+              <img src="./assets/img/home/partners/5.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -175,6 +216,28 @@
       //   $('.right-nav').addClass('animated')
       // }, 1000)
 
+      $('.partners-carousel').owlCarousel({
+        loop: true,
+        // margin: 10,
+        nav: false,
+        items: 5,
+        responsive : {
+        // breakpoint from 0 up
+          0 : {
+            items:1
+          },
+          480 : {
+            items:2
+          },
+          768 : {
+            items:4
+          },
+          1000:{
+            items:5
+          }
+      }
+
+      })
 
     });
   </script>

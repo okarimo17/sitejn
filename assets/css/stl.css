@@ -48,6 +48,9 @@ p {
     line-height: 26px;
 }
 
+.sperater {
+    background-color: #fff;
+}
 /*Shared Styles */
 .section {
     padding: 120px 0;
@@ -331,7 +334,9 @@ a:hover{
   
 /* our story section */
 
-
+.story-section {
+    padding-bottom: 80px!important;
+}
 .story-section h6 {
     text-transform: uppercase;
     color: var(--secondary-color);
@@ -382,4 +387,15 @@ a:hover{
     font-size: 18px;
     line-height: 30px;
     letter-spacing: 2px;
+}
+
+/* partners section */
+.partners-carousel .item-inner {
+    text-align: center;
+}
+.partners-carousel .item-inner img {
+    max-height: 90px;
+    max-width: 100%;
+    display: inline-block;
+    object-fit: contain;
 }
