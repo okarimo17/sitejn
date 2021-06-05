@@ -357,3 +357,29 @@ a:hover{
 .story-section .bottom-bar ul li a:hover{
     color: var(--secondary-color);
 }
+.story-section .feature-image {
+    position: relative;
+}
+.story-section .cercle-overlay {
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    bottom: -45px;
+    left: -90px;
+    background: linear-gradient(to right,#014c97a9,#014c97a9), url('../img/home/story.jpg') ;
+    border-radius: 50%;
+    background-size: cover;
+    padding: 45px 35px 0;
+}
+.story-section .cercle-overlay h6 {
+    font-size: 34px;
+    font-weight: bolder;
+    margin-bottom: 4px;
+}
+.story-section .cercle-overlay p {
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
