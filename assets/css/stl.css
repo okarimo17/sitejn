@@ -815,3 +815,27 @@ a:hover{
     display: block;
     font-weight: 500;
 }
+
+
+.home-slider .owl-nav{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    max-width: 380px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+
+.home-slider .owl-nav button{
+    height: 45px;
+    width: 45px;
+    color: #fff!important;
+    font-size: 24px!important;
+    border: 1px solid #fff!important;
+    border-radius: 50%;
+    outline: none;
+}
