@@ -909,13 +909,14 @@ p {
 }
 .services-section .service-item .service-image img {
     transition: .25s all;
+    min-height: 360px;
 }
 .services-section .service-item .service-image img:hover {
     transform: scale(1.1);
 }
-.services-section .service-item > .service-image{
+/* .services-section .service-item > .service-image{
     min-height: 360px;
-}
+} */
 
 .services-section .service-item.dark-item .outlined-btn {
     --color:#fff;
@@ -947,6 +948,7 @@ p {
 .video-section .feature-image img {
     height: 100%;
     object-fit: cover;
+    min-height: 600px;
 }
 .video-section .play_button_outer {
     left: 0%;
@@ -1049,4 +1051,38 @@ p {
     left: 0;
     bottom: 0;
     height: 210px;
+}
+.home-slider  .slider-bg {
+    height: 100%;
+    width: 100%;
+}
+.home-slider .owl-item  .slider-bg  {
+    /* animation: ImageFadeIN 10s ; */
+    transition: 15s transform;
+}
+.home-slider .owl-item.active .slider-bg  {
+    /* animation: ImageFadeIN 10s ; */
+    transform: scale(1.2);
+}
+
+
+.home-slider .owl-item .bottom-bar  {
+    bottom: -80px;
+    opacity: 0.4;
+    transition: .5s all;
+}
+
+.home-slider .owl-item.active .bottom-bar  {
+    bottom: 0px;
+    opacity: 1;
+}
+
+
+@keyframes ImageFadeIN{
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }

@@ -545,7 +545,7 @@
         </div>
 
         <div class="col-md-5 offset-md-1 sm-center mt-5 mt-md-0  image-part px-0">
-          <div class="feature-image" style="min-height: 600px;">
+          <div class="feature-image">
             <img src="./assets/img/home/vide.jpg" class="img-fluid" alt="story section image">
 
             <a class="play_button_outer" data-fancybox="video" href="http://www.youtube.com/watch?v=YrKLy4VN-7k">
@@ -701,6 +701,27 @@
         animateOut: 'fadeOut'
 
       })
+
+
+      const top_header = $('.top-header-outer')
+      let fixed = false;
+      $(document).scroll(() => {
+        if ($(this).scrollTop() > 250) {
+          if (!fixed) {
+            fixed = true;
+            top_header.addClass('fixed')
+          }
+        } else {
+          if (fixed) {
+            top_header.removeClass('fixed')
+            fixed = false
+          }
+        }
+      })
+
+      setTimeout(() => {
+        $('.right-nav').addClass('animated')
+      }, 1000)
 
 
 
