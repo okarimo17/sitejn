@@ -129,26 +129,38 @@
 
 
   <div class="home-slider">
-  
-    <div class="slider-item">
-      <div class="slider-bg">
-        <img class="img-fluid" src="./assets/img/home/slides/bg1.jpg" alt="slide background">
-      </div>
-      <div class="bottom-bar">
-        <div class="row mx-0">
-          <div class="col-3 px-0">
-            <div class="sm-img">
-              <img src="./assets/img/home/slides/sm1.jpg" alt="small image">
-            </div>
+    <div class="owl-carousel home-slider">
+      <div class="item">
+        <div class="slider-item">
+          <div class="slider-bg">
+            <img class="img-fluid" src="./assets/img/home/slides/bg1.jpg" alt="slide background">
           </div>
-          <div class="col-5 px-0 bottom-text">
-            <div class="inner">
-              
+          <div class="bottom-bar">
+            <div class="row mx-0">
+              <div class="col-3 px-0">
+                <div class="sm-img">
+                  <img src="./assets/img/home/slides/sm1.jpg" alt="small image">
+                </div>
+              </div>
+              <div class="col-6 px-0 bottom-text">
+                <div class="inner">
+                  <h4>Welcome to Industris...!</h4>
+                  <h2> <a href="#" tabindex="0">Alternative Energy</a></h2>
+                  <p>We are building a smarter, safer, and more sustainable world. That’s the Power of Connected. That’s the Power of Industris.</p>
+               
+                  <div class="slider-scroll-btn">
+                    <a class="scroll-btn" href="#projects" tabindex="0">Scroll To <i class="fa fa-arrow-circle-o-down"></i></a>
+                  </div>
+               
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+
   </div>
 
 
@@ -505,8 +517,19 @@
             items:5
           }
       }
-
       })
+
+
+      $('.owl-carousel.home-slider').owlCarousel({
+        loop: false,
+        // margin: 10,
+        nav: false,
+        items: 1,
+      })
+
+
+
+
 
     });
   </script>

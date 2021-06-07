@@ -774,10 +774,9 @@ a:hover{
     bottom: 0;
     left: 0;
     right: 0;
-    background: red;
 }
 .home-slider .slider-item .bottom-bar .sm-img{
-    height: 250px;
+    min-height: 250px;
     width: 100%;
 }
 .home-slider .slider-item .bottom-bar .sm-img img{
@@ -786,4 +785,33 @@ a:hover{
 }
 .home-slider .slider-item .bottom-text{
     background: var(--secondary-color);
+}
+.home-slider .slider-item .bottom-text .inner{
+    height: 100%;
+    width: 100%;
+    padding: 45px;
+}
+.home-slider .slider-item .bottom-text h4{
+    font-family: 'Raleway';
+    font-weight: 400;
+}
+.home-slider .slider-item .bottom-text a{
+    transition: .3s ;
+}
+
+.home-slider .slider-item .slider-scroll-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+}
+.home-slider .slider-item .slider-scroll-btn a{
+    writing-mode: vertical-rl;
+    text-align: center;
+    height: 100%;
+    display: block;
+    font-weight: 500;
 }
