@@ -759,7 +759,7 @@ a:hover{
 
 /* Home Slider */
 .home-slider .slider-item {
-    height: 90vh;
+    height: 94vh;
     /* overflow: hidden; */
     position: relative;
 }
@@ -838,4 +838,15 @@ a:hover{
     border: 1px solid #fff!important;
     border-radius: 50%;
     outline: none;
+}
+
+
+.projects-slider .slider-item .bottom-text .inner {
+    padding: 30px;
+}
+.projects-slider .owl-nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 210px;
 }
