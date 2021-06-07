@@ -258,93 +258,240 @@ p {
 }
     
 
-/* Top Header Container Styles */
-.top-header {
-    background: #fff;
-    padding: 12px 0;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-.top-header > .container {
-    overflow: hidden;
-}
-
-/* Full Navbar Styles */ 
-
-.full-navbar {
-    padding: 0;
-}
 
 
-/* List Items Style */
 
-.main-navbar .logo img {
-    height: 44px;
-}
-.main-navbar .nav-item {
-    margin-right: 20px;
-}
-.main-navbar .nav-item .nav-link{
-    font-size: 18px;
-    transition: .3s color;
+
+
+
+
+.styled-btn {
+    background-color: var(--secondary-color);
+    color: #fff;
     position: relative;
-    overflow: hidden
+    padding: 16px 40px;
+    overflow: hidden;
+    display: block;
 }
-.main-navbar .nav-item .nav-link::after {
+.styled-btn > *{
+    position: relative;
+}
+.styled-btn:hover{
+    color: #fff;
+}
+.styled-btn::before{
     content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
     left: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: .25s all ease-in-out;
+    bottom: 0;
+    background-color: #000;
     transform: translateX(-100%);
+    transition: .2s all linear;
 }
-
-.main-navbar .nav-item.active  .nav-link::after ,
-.main-navbar .nav-item:hover .nav-link::after  {
+.styled-btn:hover::before{
     transform: translateX(0%);
 }
-
-/* Login Sign-up Styles */
-.account-options {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media screen and (max-width:1120px) {
+    .styled-btn {
+        padding: 8px 20px;
+    }
 }
 
 
-.account-options .acc-btn  {
-    display: inline-block;
-    /* background:  var(--primary-color); */
+
+
+
+
+
+
+/* TOP HEADER */
+.top-header {
+    padding: 0 30px;
     font-size: 14px;
-    color: #333;
-    /*padding: 8px 20px;*/
-    padding: 10px 15px;
-    border-radius: 30px;
-    position: relative;
-    margin-left: 6px;
-    letter-spacing: 1px;
-    transition: .2s all ease-in-out;
+    background-color: #03132B;
+    color: #fff;
 }
-.account-options .acc-btn.login-btn i {
-    margin-right: 5px;
+.top-header p {
+    margin-bottom: 0;
 }
-.account-options .acc-btn:hover {
-    color:  var(--primary-color);
+.top-header .header-infos .info-item{
+    display: inline-block;
+    padding: 20px;
+    border-left: 1px solid rgba(255,255,255,0.1);
 }
 
-.account-options .acc-btn.listing-btn {
-    border: 1px solid rgba(0,0,0,0.2);
-    border-radius: 5px;
-    margin-left: 10px;
+.top-header .header-infos .info-item:last-child{
+    border-right: 1px solid rgba(255,255,255,0.1);
 }
-.account-options .acc-btn.listing-btn i {
-    margin-left: 2px;
+
+.top-header .info-item .info-icon {
+    font-weight: 500;
+    margin-right: 4px;
+    color: var(--secondary-color);
+    font-size: 18px;
 }
-a:hover{
-    text-decoration: none;
+
+.top-header .header-actions  {
+    float: right;
+    display: inline-flex;
 }
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: var(--secondary-color);
+    transition: .15s all;
+}
+
+.top-header .header-actions a {
+    font-weight: 400;
+    padding: 20px 10px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+}
+.top-header .header-actions a:last-child {
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.top-header .header-actions a i {
+    margin-right: 4px;
+}
+@media screen and (max-width:980px) {
+    .top-header .header-actions  {
+        display: block;
+        float: none;
+    }
+    .top-header .header-actions a {
+        margin-bottom: 10px;
+    }
+    .top-header .header-infos .info-item{
+        margin-bottom: 10px;
+    }    
+}
+
+/* TOP NAV */
+
+.top-nav #navbar {
+    /* border-right: 1px solid #e7e7e7; */
+}
+
+.top-nav .top-nav_inner {
+    height: 115px;
+    position: relative;
+}
+.top-nav .top-nav_inner .row {
+    height: 100%;
+}
+.top-nav .nav-logo {
+    /* background-color: var(--primary-color); */
+    padding: 10px 20px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.top-nav .nav-logo img {
+    max-width: 210px !important;
+}
+
+.top-nav .contact-btn{
+    text-align: right;
+}
+ .menu {
+    /* flex: 1; */
+}
+.top-nav li.nav-item {
+    padding: 0 10px;
+    color: #000;
+    font-weight: 500;
+}
+.top-nav li.nav-item .nav-link {
+    color: #000;
+    font-family: 'Raleway';
+    font-weight: 600;
+}
+.top-nav li.nav-item.active .nav-link {
+    color: var(--secondary-color);
+}
+
+.top-nav .header-search {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+} 
+
+
+.top-nav .header-search input#search {
+    border: none;
+    color: #606060;
+    font-size: 16px;
+    font-weight: normal;
+    width: 80%;
+}
+
+.top-nav .header-search input#search {
+    border: none;
+    color: #606060;
+    font-size: 16px;
+    font-weight: normal;
+    width: 80%;
+    outline: none;
+    border: none;
+}
+.top-nav .header-search i {
+    color: #EAC319 !important;
+}
+
+.navbar-toggler{
+    position: absolute;
+    top: 32px;
+    right: 20px;
+}
+@media screen and (max-width:580px) {
+    /* .top-nav .top-nav_inner{
+        padding-bottom: 10px;
+    } */
+    .top-nav .nav-logo {
+        justify-content: normal;
+    }
+    .top-nav .header-search input#search{
+        padding: 10px 10px;
+        margin-top: 10px;
+    }
+    .top-nav .top-nav_inner .row,
+    .top-nav .top-nav_inner{
+        height: auto;
+    }
+    .navbar-toggler{
+        position: absolute;
+        top: auto;
+        right: 20px;
+        top: 10px;
+    }
+}
+.bg-light {
+    background: #fff!important;
+}
+
+.top-header-outer.fixed{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1008;
+    animation: fixedHeaderAnime .2s ;
+}
+.top-header-outer.fixed .top-header {
+    display: none;
+}
+@keyframes fixedHeaderAnime {
+    0%{
+        transform: translateY(-100%);  
+    }
+    100% {
+        transform: translateY(0%);
+    }
+    
+}
+
 
 /* Slide Right NavBar*/
 
@@ -358,6 +505,7 @@ a:hover{
     z-index: 200;
     transform: translateX(100%);
     overflow: hidden;
+    z-index: 1010;
 }
 .right-nav.animated{
     transition: .5s all;
@@ -474,6 +622,58 @@ a:hover{
     border: none!important;
     outline: none!important;
 }
+
+.right-nav .search-top{
+    margin-top: 10px;
+    padding: 15px 20px;
+}
+
+.right-nav .contact-btn {
+    text-align: left;
+    margin-top: 25px;
+}
+.right-nav .header-search {
+    position: initial;
+    top: initial;
+    transform: none;
+    background: #efefef;
+}
+.right-nav .search-top input {
+    padding: 15px 10px;
+    background: #efefef;
+}
+.right-nav .search-top button {
+    border: none;
+    outline: noen;
+    background: #ddd;
+    padding: 20px;
+}
+.right-nav .header-search input#search{
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 /* our story section */
